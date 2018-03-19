@@ -45,4 +45,11 @@ public class ShopTest {
         shop.removeStock(acousticGuitarStrings);
         assertEquals(1, shop.getStockCount());
     }
+
+    @Test
+    public void canGetTotalPotentialProfit() {
+        shop.addStock(acousticGuitarStrings);
+        shop.addStock(guitar);
+        assertEquals(21.00, shop.getPotentialProfit(), 0.01);
+    }
 }
